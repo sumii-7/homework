@@ -68,3 +68,15 @@ const user = {
 console.log(user["이름"]);
 console.log(user["나이"]);
 console.log(user["주소"]);
+
+// 8번
+localStorage.setItem("user", JSON.stringify(user));
+console.log(user);
+
+const User = JSON.parse(localStorage.getItem("user"));
+console.log(User);
+
+User.나이 = 30;
+
+localStorage.setItem("user", JSON.stringify(User));
+console.log(User);
